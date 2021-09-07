@@ -1,25 +1,24 @@
+*{
+    font-family: 'Comfortaa', cursive;
+    width: auto;
+}
+header{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.164);
+    height: 100px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    
+    }
+body{
+    background-color: #F0F8FF;
+}
 #mapid {
     height: 670px;
 }
-
-main {
-    display: flex;
-}
-
-main .left{
-    width: 50%;}
-
-main .right {
-    margin-left: 20px;
-    width: 50%;
-}
-
-.right .filter-box .homes-box {
-    width: 100%;
-    padding: 20px;
-    list-style: none;
-}
-
 footer {
     display: flex;
     position: static;
@@ -30,26 +29,30 @@ footer {
     justify-content: center;
     border-top: 1px solid blue;
 }
-
 footer div {
     width: 33%;
     height: 20px;
 }
+main .huisjes{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+.huisje{
+    padding: 10px;
+    margin: auto;
+}
+img{
+    height: 250px;
+    width: 250px;
+    align-items: center;
 
-.filter-box label{
-    width: 100px;
-    line-height: 1.8em;
 }
 
-.form-control{
-    line-height: 50px;
+.huisje{
+    display: inline-grid;
+    grid-template-columns: auto auto;
 }
 
-.form-control label{
-    letter-spacing: 0.15em;
-
-}
-
-header{
-    text-align: center;
+.info{
+    padding: 10px;
 }

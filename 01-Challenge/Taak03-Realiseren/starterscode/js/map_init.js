@@ -10,7 +10,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: '' //plak de token als string hier 
+    accessToken: 'pk.eyJ1IjoianB3aWVyc21hIiwiYSI6ImNrdDl2bmlyYTA1dmkycGs0NWQ3Z21wY2YifQ.xm1lW1PGxU0lebTC6vL3rQ' //plak de token als string hier 
 }).addTo(mymap);
 
 // Voor een access token maak je account aan https://account.mapbox.com/access-tokens/
