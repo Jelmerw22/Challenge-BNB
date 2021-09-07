@@ -1,6 +1,6 @@
 *{
     font-family: 'Comfortaa', cursive;
-    width: auto;
+    text-align: center;
 }
 header{
     text-align: center;
@@ -16,9 +16,6 @@ header{
 body{
     background-color: #F0F8FF;
 }
-#mapid {
-    height: 670px;
-}
 footer {
     display: flex;
     position: static;
@@ -33,26 +30,23 @@ footer div {
     width: 33%;
     height: 20px;
 }
-main .huisjes{
+.huisjes{
     display: inline-grid;
     grid-template-columns: auto auto;
 }
-.huisje{
+.huis{
+    display: inline-grid;
+    grid-template-columns: auto auto;
     padding: 10px;
-    margin: auto;
 }
 img{
-    height: 250px;
-    width: 250px;
-    align-items: center;
+    height: 90%;
+    width: 90%;
 
 }
-
-.huisje{
-    display: inline-grid;
-    grid-template-columns: auto auto;
+p{
+    max-width: 300px;
 }
-
-.info{
-    padding: 10px;
+#mapid {
+    height: 300px;
 }

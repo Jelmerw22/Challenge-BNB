@@ -55,13 +55,22 @@ if (is_object($db_conn->query($sql))) { //deze if-statement controleert of een s
 <body>
     <header>
         <div class="header">
-        <h1>Jelmer's Bed & Breakfast!</h1>
+        <h1>Bed & Breakfast!</h1>
         </div>
     </header>
     <main>
         <div class="huisjes">
-            
+            <?php if (isset($database_gegevens) && $database_gegevens != null) : ?>
+                <?php foreach ($database_gegevens as $huisje) : ?>
+                    <div class="huis">
+                        <div class="image"><?php echo $huisje['image']; ?></div>
+                        <div class="name+descr"><h4><?php echo $huisje['name']; ?></h4>
+                        <p><?php echo $huisje['description'] ?></p></div>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
+        <div id="mapid"></div>
     </main>
     <footer>
         <div></div>
