@@ -15,12 +15,3 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 // Voor een access token maak je account aan https://account.mapbox.com/access-tokens/
 // plak de code in het object hierboven
-
-var myIcon = L.icon({
-    iconUrl: 'roc.jpg',
-    iconSize: [24, 24],
-});
-
-var rocMarker = L.marker([52.28785, 4.83866], {
-    icon: myIcon
-}).addTo(mymap);

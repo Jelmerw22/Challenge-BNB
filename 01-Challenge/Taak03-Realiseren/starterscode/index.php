@@ -76,18 +76,22 @@ if (is_object($db_conn->query($sql))) { //deze if-statement controleert of een s
         <div></div>
         <div>copyright Quattro Rentals BV.</div>
         <div></div>
-
     </footer>
     <script src="js/map_init.js"></script>
     <script>
         // De verschillende markers moeten geplaatst worden. Vul de longitudes en latitudes uit de database hierin
         var coordinates = [
-
-
+            [52.44902, 4.61001],
+            [52.99864, 6.64928],
+            [52.30340, 6.36800],
+            [50.89720, 5.90979]
         ];
 
         var bubbleTexts = [
-
+            'IJmuiden Cottage',
+            'Assen Bungalow',
+            'Espelo Entree',
+            'Weustenrade Woning'
 
         ];
     </script>

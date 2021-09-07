@@ -4,7 +4,7 @@
 }
 header{
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.164);
+    background-color: #e9c56a63;
     height: 100px;
     width: auto;
     display: flex;
@@ -13,8 +13,16 @@ header{
     position: static;
     
     }
+    h1{
+        color: #E76F51;
+    }
+    header :hover{
+        color: #F4A261;
+        animation:none;
+
+    }
 body{
-    background-color: #F0F8FF;
+    background-color:#2A9D8F;
 }
 footer {
     display: flex;
@@ -24,7 +32,7 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid blue;
+    border-top: 1px #264653;
 }
 footer div {
     width: 33%;
@@ -39,6 +47,7 @@ footer div {
     grid-template-columns: auto auto;
     padding: 10px;
 }
+
 img{
     height: 90%;
     width: 90%;
@@ -46,6 +55,10 @@ img{
 }
 p{
     max-width: 300px;
+    text-shadow: 0.5px 0.5px #264653;
+}
+h4{
+    color: #264653;
 }
 #mapid {
     height: 300px;
