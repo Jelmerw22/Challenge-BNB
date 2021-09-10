@@ -1,6 +1,5 @@
 *{
     font-family: 'Comfortaa', cursive;
-    text-align: center;
 }
 header{
     text-align: center;
@@ -32,7 +31,7 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
-    border-top: 1px #264653;
+    text-align: center;
 }
 footer div {
     width: 33%;
@@ -41,11 +40,12 @@ footer div {
 .huisjes{
     display: inline-grid;
     grid-template-columns: auto auto;
+    padding-left: 10%;
 }
 .huis{
     display: inline-grid;
     grid-template-columns: auto auto;
-    padding: 10px;
+    padding: 1%;
 }
 
 img{
@@ -54,11 +54,12 @@ img{
 
 }
 p{
-    max-width: 300px;
+    max-width: 50%;
     text-shadow: 0.5px 0.5px #264653;
 }
 h4{
     color: #264653;
+    text-decoration: underline #264653;
 }
 #mapid {
     height: 300px;
