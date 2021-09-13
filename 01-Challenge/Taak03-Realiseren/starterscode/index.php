@@ -16,13 +16,13 @@ if (isset($_GET['filter_submit'])) {
     if ($_GET['faciliteiten'] == "ligbad") { // Als ligbad is geselecteerd filter dan de zoekresultaten
         $bathIsChecked = true;
 
-        $sql = "SELECT * FROM ligbaden"; // query die zoekt of er een BAD aanwezig is.
+        $sql = "SELECT * FROM homes WHERE bath_present=1"; // query die zoekt of er een BAD aanwezig is.
     }
 
     if ($_GET['faciliteiten'] == "zwembad") {
         $poolIsChecked = true;
 
-        $sql = ""; // query die zoekt of er een ZWEMBAD aanwezig is.
+        $sql = "SELECT * FROM homes WHERE pool_present=1"; // query die zoekt of er een ZWEMBAD aanwezig is.
     }
 }
 
@@ -81,44 +81,11 @@ if (is_object($db_conn->query($sql))) { //deze if-statement controleert of een s
                                     ?>
                             </ul>
                         </div>   
+                    </div>
         </div>
             <?php endforeach; ?>
                 <?php endif; ?>
-        <div class="line"></div>                         
-        <div class="book">
-                <h3>Reservering maken</h3>
-                <div class="form-control">
-                    <label for="aantal_personen">Vakantiehuis</label>
-                    <select name="gekozen_huis" id="gekozen_huis">
-                        <option value="1">IJmuiden Cottage</option>
-                        <option value="2">Assen Bungalow</option>
-                        <option value="3">Espelo Entree</option>
-                        <option value="4">Weustenrade Woning</option>
-                    </select>
-                </div>
-                <div class="form-control">
-                    <label for="aantal_personen">Aantal personen</label>
-                    <input type="number" name="aantal_personen" id="aantal_personen">
-                </div>
-                <div class="form-control">
-                    <label for="aantal_dagen">Aantal dagen</label>
-                    <input type="number" name="aantal_dagen" id="aantal_dagen">
-                </div>
-                <div class="form-control">
-                    <h5>Beddengoed</h5>
-                    <label for="beddengoed_ja">Ja</label>
-                    <input type="radio" id="beddengoed_ja" name="beddengoed" value="ja">
-                    <label for="beddengoed_nee">Nee</label>
-                    <input type="radio" id="beddengoed_nee" name="beddengoed" value="nee">
-                </div>
-                <button>Reserveer huis</button>
-            </div>
-            <div class="currentBooking">
-                <div class="bookedHome"></div>
-                <div class="totalPriceBlock">Totale prijs &euro;<span class="totalPrice">0.00</span></div>
-            </div>
-        </div>
-        <div class="right">
+<br>
             <div class="filter-box">
                 <form class="filter-form">
                     <div class="form-control">
@@ -135,6 +102,7 @@ if (is_object($db_conn->query($sql))) { //deze if-statement controleert of een s
                     <button type="submit" name="filter_submit">Filter</button>
                 </form>
                 </div>
+<br>
         <div id="mapid"></div>
     </main>
     <footer>
