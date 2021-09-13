@@ -40,18 +40,19 @@ footer div {
 .huisjes{
     display: inline-grid;
     grid-template-columns: auto auto;
-    padding-left: 10%;
+    padding-left: 5%;
+    padding-top: 1%;
+    grid-column-gap: 50px;
 }
 .huis{
     display: inline-grid;
     grid-template-columns: auto auto;
-    padding: 1%;
+    grid-column-gap: 10px;
 }
 
 img{
-    height: 90%;
-    width: 90%;
-
+    height: auto;
+    width: 450px;
 }
 p{
     max-width: 50%;
@@ -63,4 +64,26 @@ h4{
 }
 #mapid {
     height: 300px;
+}
+
+
+
+.filter-box label{
+    width: 100px;
+    line-height: 1.8em;
+}
+
+.form-control{
+    line-height: 50px;
+}
+
+.form-control label{
+    letter-spacing: 0.15em;
+
+}
+
+.right .filter-box .homes-box {
+    width: 100%;
+    padding: 20px;
+    list-style: none;
 }
