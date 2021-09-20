@@ -1,7 +1,6 @@
 *{
     font-family: 'Comfortaa', cursive;
 }
-
 header{
     text-align: center;
     background-color: #e9c56a63;
@@ -38,10 +37,6 @@ footer div {
     width: 33%;
     height: 20px;
 }
-.huisje{
-    display: inline-grid;
-    grid-template-columns: auto auto;
-}
 
 .huis{
     display: inline-grid;
@@ -56,7 +51,7 @@ img{
     width: 450px;
 }
 p{
-    max-width: 30%;
+    max-width: 50%;
     text-shadow: 0.5px 0.5px #264653;
 }
 h4{
@@ -70,15 +65,15 @@ h4{
 
 .filter-box label{
     width: 200px;
-    line-height: 1.8em;
+    line-height: 1.5em;
 }
 
 .form-control{
-    line-height: 50px;
+    line-height: 30px;
 }
 
 .form-control label{
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
 
 }
 
@@ -86,4 +81,16 @@ h4{
     width: 100%;
     padding: 20px;
     list-style: none;
+}
+
+.filter-reserveer-grid{
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.filter-reserveer-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
