@@ -59,6 +59,7 @@ if (is_object($db_conn->query($sql))) { //deze if-statement controleert of een s
     <main>
         <div class="left">
             <div class="book">
+                <form action="" method="POST">
                 <h3>Reservering maken</h3>
                 <div class="form-control">
                     <label for="aantal_personen">Vakantiehuis</label>
@@ -84,13 +85,38 @@ if (is_object($db_conn->query($sql))) { //deze if-statement controleert of een s
                     <label for="beddengoed_nee">Nee</label>
                     <input type="radio" id="beddengoed_nee" name="beddengoed" value="nee">
                 </div>
-                <button>Reserveer huis</button>
+                <input class="submit" type="submit" value="Reserveer Huis" name="submit"></input>
+                <?php if (isset($database_gegevens) && $database_gegevens != null) : ?>
+                <?php foreach ($database_gegevens as $huisje) : ?>
+                <?php
+                    $gekozen = [1 => 55.00, 2 => 155.00, 3 => 300.00, 4 => 75.00];
+                    $beddenprijs = [1 => 10.00, 2 => 0.00, 3 => 0.00, 4 => 0.00];
+                    if(isset($_POST['aantal_dagen']) && $_POST['aantal_personen'] != null) {
+                        $aantal_dagen = $_POST['aantal_dagen'];
+                        $aantal_personen = $_POST['aantal_personen'];
+                        $gekozenhuis = $_POST['gekozen_huis'];
+                        $nummerhuis = $gekozen[$gekozenhuis];
+                        $bedden = $beddenprijs[$gekozenhuis];
+                    }
+                ?>
+                <?php endforeach; ?>
+                <?php endif; ?>
             </div>
             <div class="currentBooking">
                 <div class="bookedHome"></div>
-                <div class="totalPriceBlock">Totale prijs &euro;<span class="totalPrice">0.00</span></div>
+                <div class="totalPriceBlock"><div class="mL">Totale prijs &euro;<span class="totalPrice"><?php if(isset($_POST['submit'])){
+                if(isset($_POST['beddengoed']) && $_POST['beddengoed'] == "ja"){
+                    echo $all = ($nummerhuis * $aantal_dagen) * $aantal_personen + $bedden;
+                } elseif (isset($_POST['beddengoed']) && $_POST['beddengoed'] == "nee") {
+                    echo $totaal = ($nummerhuis * $aantal_dagen) * $aantal_personen;
+                } else {
+                    echo "";
+                }
+            } ?></div></span></div>
+             
             </div>
             <div id="mapid"></div>
+        </form>
         </div>
         <div class="right">
             <div class="filter-box">
