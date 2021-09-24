@@ -2,7 +2,7 @@
 
 ## Van wie hebt je feedback gevraagd?
 
-- ...
+- Hayder
 
 ## Feedback
 
